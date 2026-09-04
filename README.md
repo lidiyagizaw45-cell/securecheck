@@ -164,7 +164,6 @@ python -m pytest backend/test_backend.py -v
 
 For detailed architectural flowcharts, scoring formulas, and exhaustive file-by-file code explanations:
 
-- 📄 **[Download Complete PDF Manual (Architecture & Code Explanations)](docs/SecureCheck_Complete_Manual.pdf)**: Print-ready, comprehensive PDF manual with visual diagrams and full codebase analysis.
 - 📐 **[System Architecture & Visual Documentation](DOCUMENTATION.md)**: Visual diagrams of system workflows, data schemas, and API references.
 - 📂 **[Code Explanation Directory](docs/code_explanation/README.md)**: Comprehensive line-by-line / section-by-section breakdown of every single source file in the repository.
 
@@ -196,18 +195,15 @@ SecureChecks/
 │   └── test_backend.py           # Backend Pytest test suite
 │
 ├── frontend/                     # Vite + React 18 SPA Frontend
-│   ├── src/
-│   │   ├── App.jsx               # Main React Router router and layout
-│   │   ├── index.css             # High-contrast UI styles & dark theme
-│   │   ├── components/           # Reusable UI components (Navbar, ScoreGauge, Cards)
-│   │   ├── pages/                # Main views (Dashboard, NewAudit, Report, CodeScanner)
-│   │   └── services/api.js       # Centralized REST API client
-│   ├── package.json              # Frontend npm package dependencies
-│   └── vite.config.js            # Vite configuration with proxy and allowedHosts
-│
-└── docs/
-    └── code_explanation/         # Exhaustive file-by-file code explanations
-        └── README.md             # Code explanation index
+    ├── src/
+    │   ├── App.jsx               # Main React Router router and layout
+    │   ├── index.css             # High-contrast UI styles & dark theme
+    │   ├── components/           # Reusable UI components (Navbar, ScoreGauge, Cards)
+    │   ├── pages/                # Main views (Dashboard, NewAudit, Report, CodeScanner)
+    │   └── services/api.js       # Centralized REST API client
+    ├── package.json              # Frontend npm package dependencies
+    └── vite.config.js            # Vite configuration with proxy and allowedHosts
+
 ```
 
 ---
