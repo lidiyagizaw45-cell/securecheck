@@ -1,0 +1,303 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --bg-main: #0b0f19;
+  --bg-card: #111827;
+  --bg-card-hover: #172033;
+  --bg-subtle: #1f293d;
+  --border-color: #243049;
+  
+  --accent-cyan: #38bdf8;
+  --accent-blue: #3b82f6;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+  --accent-purple: #a855f7;
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  margin: 0;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* Glassmorphism & Cards */
+.sc-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sc-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.sc-card-interactive {
+  cursor: pointer;
+}
+
+.sc-card-interactive:hover {
+  background-color: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px -3px rgba(56, 189, 248, 0.15);
+}
+
+/* High-Contrast Score Badges */
+.badge-grade-a {
+  background: #10b981 !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.badge-grade-b {
+  background: #38bdf8 !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.badge-grade-c {
+  background: #f59e0b !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.badge-grade-f {
+  background: #f43f5e !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.4);
+}
+
+/* Risk Badges (Clear High-Contrast Text) */
+.badge-critical {
+  background-color: #4c0519 !important;
+  color: #fecdd3 !important;
+  border: 1px solid #e11d48 !important;
+  font-weight: 700 !important;
+}
+
+.badge-high {
+  background-color: #431407 !important;
+  color: #fed7aa !important;
+  border: 1px solid #ea580c !important;
+  font-weight: 700 !important;
+}
+
+.badge-medium {
+  background-color: #451a03 !important;
+  color: #fef08a !important;
+  border: 1px solid #d97706 !important;
+  font-weight: 700 !important;
+}
+
+.badge-low {
+  background-color: #082f49 !important;
+  color: #bae6fd !important;
+  border: 1px solid #0284c7 !important;
+  font-weight: 700 !important;
+}
+
+/* Clean Tag Badges (Never matches background color, 100% visible) */
+.badge-tag-info {
+  background-color: rgba(56, 189, 248, 0.1) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  font-weight: 600 !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-tag-success {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  font-weight: 600 !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-tag-warning {
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  font-weight: 600 !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-tag-danger {
+  background-color: rgba(244, 63, 94, 0.1) !important;
+  color: #fb7185 !important;
+  border: 1px solid rgba(244, 63, 94, 0.35) !important;
+  font-weight: 600 !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-tag-purple {
+  background-color: rgba(168, 85, 247, 0.1) !important;
+  color: #c084fc !important;
+  border: 1px solid rgba(168, 85, 247, 0.35) !important;
+  font-weight: 600 !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Solid Badges & Buttons */
+.badge-secure {
+  background-color: #10b981 !important;
+  color: #000000 !important;
+  border: 1px solid #34d399 !important;
+  font-weight: 800 !important;
+}
+
+.btn-success {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+.btn-success:hover {
+  background-color: #059669 !important;
+  border-color: #059669 !important;
+  color: #ffffff !important;
+}
+
+.btn-info {
+  background-color: #38bdf8 !important;
+  border-color: #38bdf8 !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+.btn-info:hover {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+.alert-success {
+  background-color: #10b981 !important;
+  color: #000000 !important;
+  border: 1px solid #34d399 !important;
+  font-weight: 700 !important;
+}
+
+/* Modern Clean Navbar */
+.navbar-custom {
+  background-color: rgba(11, 15, 25, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 0.88rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.nav-link-custom:hover {
+  color: #f8fafc;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link-custom.active {
+  color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.12);
+  font-weight: 600;
+}
+
+/* Code Snippet Viewer */
+.code-viewer {
+  background-color: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.code-viewer-header {
+  background-color: #161b22;
+  border-bottom: 1px solid #21262d;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: #8b949e;
+}
+
+.code-viewer pre {
+  padding: 16px;
+  margin: 0;
+  color: #c9d1d9;
+  font-size: 0.88rem;
+  overflow-x: auto;
+}
+
+/* Question Option Radio Card */
+.option-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.option-card:hover {
+  background-color: var(--bg-card-hover);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.option-card.selected {
+  background-color: rgba(56, 189, 248, 0.08);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
